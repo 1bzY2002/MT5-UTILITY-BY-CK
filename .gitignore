@@ -1,0 +1,43 @@
+# MetaTrader 5 Compiled Files
+*.ex5
+*.ex4
+
+# Log Files
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+*~
+
+# CSV Export Files (optional - uncomment if you don't want to track these)
+# *.csv
+
+# MetaEditor Settings
+*.set
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-*
+
+# Build Artifacts
+build/
+dist/
+output/
+
+# Cache Files
+cache/
+.cache/
+
+# Test Results
+test_results/
+backtest_reports/
+
+# Personal Configuration Files (if any)
+personal_config/
+my_settings/
