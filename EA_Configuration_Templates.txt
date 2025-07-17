@@ -1,0 +1,213 @@
+;+------------------------------------------------------------------+
+;|                    ZigZag Statistics EA - Configuration Template |
+;|                                                                  |
+;| Instructions:                                                    |
+;| 1. Copy this file to your MT5 Profiles folder                   |
+;| 2. Rename with .set extension                                    |
+;| 3. Load in EA parameters when attaching to chart                 |
+;+------------------------------------------------------------------+
+
+; === Conservative Trading Configuration ===
+; Suitable for: Stable accounts, risk-averse traders
+; Expected: Lower frequency, higher accuracy trades
+
+[Conservative]
+ZigZag1_Percentage=4.0
+ZigZag2_Percentage=6.0
+Calculation_Depth=500
+Use_Both_ZigZags=true
+
+Enable_Auto_Trading=true
+Trade_Direction=0
+Min_Time_Between_Trades=120
+Max_Spread=2.0
+Use_Session_Filter=false
+
+Min_Percentage_Move=3.5
+Min_Statistical_Significance=2.0
+Use_Market_Structure_Filter=true
+Use_Trend_Filter=true
+Trend_Lookback_Points=5
+
+Lot_Size_Method=1
+Fixed_Lot_Size=0.1
+Risk_Percentage=1.5
+Max_Daily_Loss_Percent=3.0
+Max_Trades_Per_Day=5
+Stop_Loss_Method=2
+Take_Profit_Method=1
+Risk_Reward_Ratio=2.5
+
+Use_Trailing_Stop=true
+Use_Break_Even=true
+Break_Even_Trigger=1.5
+Use_Partial_Close=false
+Partial_Close_Percent=50.0
+
+Show_Info_Panel=true
+Show_Trade_Arrows=true
+Show_Statistics=true
+Panel_Color=16777215
+Magic_Number=123456
+
+; === Aggressive Trading Configuration ===
+; Suitable for: Active traders, higher risk tolerance
+; Expected: Higher frequency, more volatile results
+
+[Aggressive]
+ZigZag1_Percentage=2.5
+ZigZag2_Percentage=4.0
+Calculation_Depth=500
+Use_Both_ZigZags=false
+
+Enable_Auto_Trading=true
+Trade_Direction=0
+Min_Time_Between_Trades=60
+Max_Spread=3.0
+Use_Session_Filter=false
+
+Min_Percentage_Move=2.0
+Min_Statistical_Significance=1.2
+Use_Market_Structure_Filter=false
+Use_Trend_Filter=true
+Trend_Lookback_Points=3
+
+Lot_Size_Method=1
+Fixed_Lot_Size=0.1
+Risk_Percentage=2.5
+Max_Daily_Loss_Percent=6.0
+Max_Trades_Per_Day=15
+Stop_Loss_Method=1
+Take_Profit_Method=1
+Risk_Reward_Ratio=2.0
+
+Use_Trailing_Stop=true
+Use_Break_Even=true
+Break_Even_Trigger=1.2
+Use_Partial_Close=true
+Partial_Close_Percent=50.0
+
+Show_Info_Panel=true
+Show_Trade_Arrows=true
+Show_Statistics=true
+Panel_Color=16777215
+Magic_Number=123457
+
+; === Scalping Configuration ===
+; Suitable for: High-frequency trading, tight risk control
+; Expected: Many small trades, quick exits
+
+[Scalping]
+ZigZag1_Percentage=1.5
+ZigZag2_Percentage=2.5
+Calculation_Depth=300
+Use_Both_ZigZags=true
+
+Enable_Auto_Trading=true
+Trade_Direction=0
+Min_Time_Between_Trades=30
+Max_Spread=1.5
+Use_Session_Filter=true
+
+Min_Percentage_Move=1.0
+Min_Statistical_Significance=1.0
+Use_Market_Structure_Filter=true
+Use_Trend_Filter=false
+Trend_Lookback_Points=3
+
+Lot_Size_Method=1
+Fixed_Lot_Size=0.1
+Risk_Percentage=1.0
+Max_Daily_Loss_Percent=4.0
+Max_Trades_Per_Day=25
+Stop_Loss_Method=1
+Take_Profit_Method=1
+Risk_Reward_Ratio=1.5
+
+Use_Trailing_Stop=false
+Use_Break_Even=true
+Break_Even_Trigger=1.0
+Use_Partial_Close=true
+Partial_Close_Percent=70.0
+
+Show_Info_Panel=true
+Show_Trade_Arrows=true
+Show_Statistics=true
+Panel_Color=16777215
+Magic_Number=123458
+
+; === Swing Trading Configuration ===
+; Suitable for: Longer-term positions, trend following
+; Expected: Fewer trades, larger moves
+
+[SwingTrading]
+ZigZag1_Percentage=5.0
+ZigZag2_Percentage=8.0
+Calculation_Depth=1000
+Use_Both_ZigZags=true
+
+Enable_Auto_Trading=true
+Trade_Direction=0
+Min_Time_Between_Trades=240
+Max_Spread=3.0
+Use_Session_Filter=false
+
+Min_Percentage_Move=4.0
+Min_Statistical_Significance=2.5
+Use_Market_Structure_Filter=true
+Use_Trend_Filter=true
+Trend_Lookback_Points=7
+
+Lot_Size_Method=1
+Fixed_Lot_Size=0.1
+Risk_Percentage=2.0
+Max_Daily_Loss_Percent=4.0
+Max_Trades_Per_Day=3
+Stop_Loss_Method=2
+Take_Profit_Method=1
+Risk_Reward_Ratio=3.0
+
+Use_Trailing_Stop=true
+Use_Break_Even=true
+Break_Even_Trigger=2.0
+Use_Partial_Close=true
+Partial_Close_Percent=40.0
+
+Show_Info_Panel=true
+Show_Trade_Arrows=true
+Show_Statistics=true
+Panel_Color=16777215
+Magic_Number=123459
+
+;+------------------------------------------------------------------+
+;| Parameter Reference                                              |
+;+------------------------------------------------------------------+
+
+; Trade_Direction Values:
+; 0 = TRADE_BOTH
+; 1 = TRADE_LONG_ONLY  
+; 2 = TRADE_SHORT_ONLY
+
+; Lot_Size_Method Values:
+; 0 = LOT_FIXED
+; 1 = LOT_PERCENTAGE
+; 2 = LOT_VOLATILITY
+
+; Stop_Loss_Method Values:
+; 0 = SL_FIXED_POINTS
+; 1 = SL_ATR
+; 2 = SL_SWING_LEVELS
+; 3 = SL_PERCENTAGE
+
+; Take_Profit_Method Values:
+; 0 = TP_FIXED_POINTS
+; 1 = TP_RISK_REWARD
+; 2 = TP_STATISTICAL
+; 3 = TP_ATR
+
+; Colors (Panel_Color):
+; 16777215 = White
+; 0 = Black
+; 255 = Red
+; 65280 = Green
+; 16711680 = Blue
